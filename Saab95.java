@@ -60,11 +60,11 @@ public class Saab95{
     }
 
     public void incrementSpeed(double amount){
-        currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+        currentSpeed = getCurrentSpeed() + speedFactor() * amount;
     }
 
     public void decrementSpeed(double amount){
-        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+        currentSpeed = getCurrentSpeed() - speedFactor() * amount;
     }
     
     // TODO fix this method according to lab pm
