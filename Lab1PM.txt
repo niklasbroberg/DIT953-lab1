@@ -10,7 +10,7 @@ I första deluppgiften bekantar vi oss med den givna javakoden samt skapar ny ko
 Koden som skrivs och godkänns i denna labb kommer senare att användas i Laboration 2.
 
 Uppgift a) // Arv och gränssnitt
-Börja med att klona repot (TODO:INSERT REPO) och kika lite i den. För nuvarande finns det två java filer Volvo240.java och Saab95.java.
+Börja med att klona repot https://github.com/niklasbroberg/DIT952-lab1 och kika lite i den. För nuvarande finns det två java filer Volvo240.java och Saab95.java.
 Just nu verkar klasserna ha ganska mycket gemensamt eftersom båda representerar bilar.
 
 Eran första uppgift blir att skapa en abstrakt klass vid namn ACar. ACar kommer vara den superklass som bilarna ska ärva ifrån då alla bilar har mycket gemensamt.
@@ -86,12 +86,12 @@ ICarMove.java
 Krav för godkänt på inlämning:
 Inga rader med fler än 80 tecken.
 Eran lösning ska endast innehålla ovannämnda filer i sektionen "Inlämning".
-Båda gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
+Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
 Alla uppgifter ska vara lösta vid redovisningen.
 Lösning skall gå att kompilera!
 
 
 Labbkriterier:
-Det är absolut förbjudet att dela, kopiera eller använda kod från varenda på något sätt. Upptäcks detta får inte bara de som delat/spritt kod utan även de som mottagit/använt kod underkänt i kursen som helhet.
+Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på något sätt. 
 Att diskutera lösningar är inte heller tillåtet, prata med labbhandledarna eller kursansvarig ifall ni behöver hjälp.
-För att få godkänt i labbarna gör ni muntliga redovisningar. Gruppen gör detta samtidigt men ni testas individuellt, dvs. båda i gruppen kommer ställas frågor var och en för sig. Detta för att undvika grupper där en medlem inte arbetar eller hamnar efter. Så se till att ni hänger med i laborationen, fråga om hjälp ifall ni fastnar.
+För att få godkänt i labbarna gör ni muntliga redovisningar. Gruppen gör detta samtidigt men ni testas individuellt, dvs. båda (eller alla tre) i gruppen kommer ställas frågor var och en för sig. Detta för att undvika grupper där en medlem inte arbetar eller hamnar efter. Så se till att ni hänger med i laborationen, fråga om hjälp ifall ni fastnar.
