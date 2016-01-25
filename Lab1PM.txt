@@ -36,7 +36,7 @@ Skapa en fil ICarMove.java och ge interfacet följande metoder:
     void turnLeft();
     void turnRight();
 
-Därefter ser ni till att ACar implementerar interfacet IMoveable.
+Därefter ser ni till att ACar implementerar interfacet ICarMove.
 
 Skapa ett enum Direction i ACar som innehåller riktningarna:
 RIGHT, LEFT, UP, DOWN
