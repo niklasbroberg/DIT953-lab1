@@ -1,0 +1,97 @@
+Laboration 1.
+
+Läs labbkriterierna längst ner på sidan först innan ni fortsätter!
+
+I denna laborationsuppgift är tanken att ni ska lära er att använda koncept som arv, gränssnitt, metod overloading och metod overriding (skuggning) tillsammans med java.
+
+Se till att noga läsa igenom instruktionerna och att ni följer de regler och krav som labbdokumentet föreskriver. Börja med att kolla igenom hela labbdokumentet och se vad som krävs för att få godkänt samt att ni laddar ner de filer som krävs.
+
+I första deluppgiften bekantar vi oss med den givna javakoden samt skapar ny kod, därefter bygger varje deluppgift på den tidigare lösningen.
+Koden som skrivs och godkänns i denna labb kommer senare att användas i Laboration 2.
+
+Uppgift a) // Arv och gränssnitt
+Börja med att klona repot (TODO:INSERT REPO) och kika lite i den. För nuvarande finns det två java filer Volvo240.java och Saab95.java.
+Just nu verkar klasserna ha ganska mycket gemensamt eftersom båda representerar bilar.
+
+Eran första uppgift blir att skapa en abstrakt klass vid namn ACar. ACar kommer vara den superklass som bilarna ska ärva ifrån då alla bilar har mycket gemensamt.
+Lägg den abstrakta klassen i en separat fil ACar.java och se till att båda bilarna ärver från den (extends).
+Tanken är nu att ni ska flytta allt som är gemensamt mellan bilklasserna till ACar klassen. På så sätt kan man göra flera bilklasser i framtiden genom att bara ärva från ACar.
+Notera: Endast det som gör Volvo240 eller Saab95 unikt ska stanna kvar i respektive klass. Resterande ska flyttas in i ACar.
+Se till att ACar har en egen implementation av metoden speedFactor som räknas ut enligt följande:
+enginePower * 0.01
+men, override:a denna metod i båda bilklasserna enligt den specifikation som redan fanns med i kodskelettet.
+
+I original filerna är alla metoder och variabler public, vilket exponerar allt till användaren. Ändra synligheten på den metoder som
+användaren inte behöver se eller känna till (interna hjälpmetoder, instansvariabler) till private. Tänk på att just instansvariablerna inte kan vara private vid arv. Då funkar däremot protected.
+
+När ni är klara bör ni ha Volvo240.java, Saab95.java och ACar.java i en och samma mapp. Volvo240 och Saab95 skall ärva från ACar och endast ha unika metoder och variabler i sina egna klasser (Dvs. inget gemensamt med varandra mer än arvet).
+Se till att alla filer kompilerar och fortsätt till nästa uppgift.
+
+Uppgift b)
+
+I denna uppgift fortsätter vi bygga på föregående genom att vi nu också implementerar ett interface kallat ICarMove.
+
+Skapa en fil ICarMove.java och ge interfacet följande metoder:
+    void move();
+    void turnLeft();
+    void turnRight();
+
+Därefter ser ni till att ACar implementerar interfacet IMoveable.
+
+Skapa ett enum Direction i ACar som innehåller riktningarna:
+RIGHT, LEFT, UP, DOWN
+
+Nu bör vi även se till att alla bilar har en position så vi kan definiera vad ett move och turn gör.
+Lägg till följande instansvariabel till ACar:
+    protected Direction direction = Direction.UP;
+    protected Point.Double position = new Point.Double(); //default point for the car, x=0,y=0
+
+Skapa switch satser i metoderna turnLeft och turnRight som beroende på nuvarande riktning svänger en riktning vänster eller höger. T.ex. om direction == LEFT så skall turnRight sätta Direction = UP. Obs. glöm ej att ni skall använda switch-satser och inte if-satser.
+
+Metoden move ska definieras som sådan att beroende på riktning så utökas x eller y värdet i variabeln position med värdet i currentSpeed.
+T.ex. om Direction == LEFT och man anropar move så ska position.x minskas med currentSpeed,
+eller om Direction == UP och man anropar move så ska position.y ökas med currentSpeed.
+
+När ni är klara med denna uppgift så skall ni ha ICarMove.java i samma mapp och ACar.java ska implementera det interfacet.
+
+Uppgift c)
+
+Dokumentation och testning är viktigt när man designar program. Eran uppgift blir att använda Javadoc för att kommentera samtliga klasser och interfaces. Ni bör ha 100% comment/Javadoc coverage för era filer. Använd funktioner som finns i IntelliJ för att uppnå detta.
+
+Det finns mycket information om Javadoc på nätet om ni behöver ta fram det.
+
+När ni är klara bör ni kunna få ut lämpliga API-dokument för ert program i HTML-filer.
+
+Uppgift d)
+
+För att även täcka testning så skall ni använda JUnit för att skriva test som har 100% coverage för era bilklasser som ni implementerat (Volvo, Saab).
+
+Även JUnit har mycket information på nätet som ni kan leta upp. Tänk på att era tester inte behöver testa "allt" utan det viktiga är att ni bekantar er med JUnit och förstår hur det fungerar.
+Därför behöver ni INTE skriva kodkontrakt för era metoder. Det räcker med att ni skriver testmetoder som testar metodernas funktionalitet med hjälp av assert/equals osv. Därefter testar ni så att alla JUnit tester passerar med "Run with coverage".
+
+Uppgift e)
+
+För närvarande så har metoderna i bilklasserna inget sätt att kontrollera hur mycket farten kan öka eller sänkas. Eran uppgift är att enligt följande kriterier skriva om metoderna:
+1. Parametern amount i gas och brake moetderna bör ligga i intervallet 0 till 1. Ifall den anropas med lägre eller högre värden så bör ni autojustera till 0 respektive 1.
+2. currentSpeed får aldrig överstiga bilens enginePower eller bli negativ. Justera incrementSpeed och decrementSpeed metoderna följaktligen. Detta gör att ni slipper hantera detta i gas eller brake metoderna.
+3. gas får inte sänka fart och vice versa brake får inte öka farten. Justera detta i metoderna.
+
+
+Inlämning (filer):
+ACar.java
+Volvo240.java
+Saab95.java
+ICarMove.java
+
+Krav för godkänt på inlämning:
+Inga rader med fler än 80 tecken.
+Eran lösning ska endast innehålla ovannämnda filer i sektionen "Inlämning".
+Båda gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
+Alla uppgifter ska vara lösta vid redovisningen.
+Lösning skall gå att kompilera!
+
+
+Labbkriterier:
+Det är absolut förbjudet att dela, kopiera eller använda kod från varenda på något sätt. Upptäcks detta får inte bara de som delat/spritt kod utan även de som mottagit/använt kod underkänt i kursen som helhet.
+Att diskutera lösningar är inte heller tillåtet, prata med labbhandledarna eller kursansvarig ifall ni behöver hjälp.
+För att få godkänt i labbarna gör ni muntliga redovisningar. Gruppen gör detta samtidigt men ni testas individuellt, dvs. båda i gruppen kommer ställas frågor var och en för sig. Detta för att undvika grupper där en medlem inte arbetar eller hamnar efter. Så se till att ni hänger med i laborationen, fråga om hjälp ifall ni fastnar.
