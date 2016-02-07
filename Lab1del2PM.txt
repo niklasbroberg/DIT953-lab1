@@ -9,7 +9,7 @@ Se till att noga läsa igenom instruktionerna och att ni följer de regler och k
 Koden som skrivs och godkänns i denna labb kommer senare att användas i Laboration 2.
 
 Börja med att klona repot https://github.com/niklasbroberg/DIT952-lab1 ifall ni inte redan gjort det i del 1. 
-Annars kan ni ta fram eran lösning för lab 1 del 1 och fortsätta därifrån. Notera att ifall ni inte är klara eller gått godkänt på lab 1 del 1 bör ni prioritera detta då denna del bygger på den förra.
+Annars kan ni ta fram eran lösning för lab 1 del 1 och fortsätta därifrån. Notera att ifall ni inte är klara eller fått godkänt på lab 1 del 1 bör ni prioritera detta då denna del bygger på den förra.
 
 Uppgift 0)
 
