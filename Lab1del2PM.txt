@@ -58,7 +58,7 @@ Uppgift c)
 I main metoden i Main.java kan ni nu fortsätta skapa 2 bilar på följande vis:
 
 ACar volvoA = new Volvo240();
-Volvo240 volvo = new Volvo240();
+ACar saabA = new Saab95();
 
 Skapa en serie av statements där volvoA och volvo anropar samma metoder i exakt samma ordning men där deras variabler har olika värden.
 Hur kan man åstadkomma detta och varför går det?
