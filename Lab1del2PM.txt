@@ -58,11 +58,17 @@ Uppgift c)
 I main metoden i Main.java kan ni nu fortsätta skapa 2 bilar på följande vis:
 
 ACar volvoA = new Volvo240();
-Volvo240 volvo = new Volvo240();
+Saab95 saab = new Saab95();
 
-Skapa en serie av statements där volvoA och volvo anropar samma metoder i exakt samma ordning men där deras variabler har olika värden.
-Hur kan man åstadkomma detta och varför går det?
+Skapa nu en serie av statements där volvoA och saab anropar samma metoder i exakt samma ordning men där deras variabler har olika värden. Ex:
+volvoA.metodA
+saab.metodA
+volvoA.metodB
+saab.metodB
+osv...
+// skriv ut något fält som båda ärver men som har olika värden
 
+Hur kommer det sig att en variabel båda ärver har olika värden?
 --------------------------------------------------------------------------------
 Inlämning (filer):
 Main.java
