@@ -1,0 +1,85 @@
+Laboration 2 del 1.
+
+Läs labbkriterierna längst ner på sidan först innan ni fortsätter!
+
+I denna laborationsuppgift är tanken att ni ska fortsätta på den lösning ni gjort i lab 1. Vi ska fokusera oss på design patterns (MVC huvudsakligen), Factory, State m.m.
+Eran lösning från Lab 1 är nu Model-delen av denna MVC-lösning ni ska bygga.
+
+Se till att noga läsa igenom instruktionerna och att ni följer de regler och krav som labbdokumentet föreskriver. Börja med att kolla igenom hela labbdokumentet och se vad som krävs för att få godkänt samt att ni laddar ner de filer som krävs.
+Koden som skrivs och godkänns i denna lab kommer att användas till de senare delarna.
+
+Börja med att kolla på repot https://github.com/niklasbroberg/DIT952-lab1 där ska ni hitta detta lab pm samt nya filer.
+Notera att ni kommer behöva eran färdiga lösning från Lab 1.
+
+Se till att ni får med "pics" mappen, bilderna och de nya java-filer ni ser i repot.
+
+Uppgift 0)
+
+Använd git (utan undantag) till denna lab, antingen via terminalen eller IntelliJ. Ni bör vid det här laget kunna hantera commits, push, pull, bransches och merges.
+Ni ska kunna uppvisa en fullständig commit-historik samt visa att ni använta minst en branch utöver master.
+Tips: Gör minst en commit per deluppgift. Använd en branch för View och en för Controller t.ex.
+
+Uppgift 1)
+Se till att eran Scania class har följande funktionalitet:
+- Flaket ska ej gå att lyfta eller sänka medans lastbilen kör (dvs. currentSpeed != 0)
+- Lastbilen ska ej kunna köra om flaket inte är helt nere (0 degrees).
+- Om bedDegree har någon annat värde än 0 ska bedIsDown vara false och true ifall den är 0.
+
+Uppgift a)
+Ladda ner alla filer och gå igenom de nya filerna noggrant, börja med CarController och följ koden därifrån.
+
+Försök köra CarController och se Volvo bilen röra sig (genom att öka värdet på gasen och gasa).
+Notera att vi förutsätter att ni använder IntelliJ, se kommentarer i koden ifall ni vill köra utan. Detta gäller mest för bilderna eftersom ni måste skapa en ny package pics i src mappen och lägga alla bilder där. För er som kör utan IntelliJ kan ni bara lägga alla bilderna tillsammans med alla Java filerna och editera koden enligt instruktionerna.
+
+Om allting har gjorts rätt så bör ni se Volvon gasa iväg och köra ut ur rutan slutligen.
+
+Eran första uppgift blir att enligt samma mönster se till att Viewn även kopplar bromsknappen till bilen. Så att Brake-knappen får effekt på eran simulation (bromsvärdet får ni från samma snurra som gasen hämtar sitt värde ifrån).
+Ni måste se till att själva Modelns state uppdateras och sen anropar tillbaka till View via Controllern.
+Tips: Se hur gas knappen är implementerad och följ samma mönster.
+
+Uppgift b)
+Volvon åker just nu ut ur rutan, stoppa detta genom att implementera följande beteende:
+- När bilen nuddar en vägg ska den stoppa helt, invertera sin riktning och starta med startEngine igen.
+- Titta på Volvo240 bildens pixlar ifall du vill veta när den ska stanna.
+Bör logiken ligga i Viewn, Controllern eller Modellen? Tänk på vad de olika delarna känner till om sin omgivning.
+
+Uppgift c)
+
+Sätt in resterande bilar och deras respektive bild (Saab95, Scania) med 100 pixlars avstånd i Y-led från varandra (alla avbildas ursprungligen med X=0).
+Koppla Turboknapparna till Saaben och flakknapparna till Scania, men även starta och stoppa alla bilar -knapparna.
+Även dessa 2 bilar ska förhindras att åka utanför rutan enligt samma beteende som skrivet innan. Går det att generalisera?
+
+Just nu gör det inget att gas och broms knapparna är kopplade till alla bilar på bilden samtidigt.
+
+Uppgift d)
+- Skriv Javadoc för hela CarController klassen och generera en HTML-sida som du kan visa upp.
+- Städa upp eran kod genom att ta bort extra rader och mellanslag. Indentera vid behov, eran kod ska vara lättläst för andra.
+- Kan ni reducera synlighetsnivå (public, protected, private) för någon av era metoder och fält i era klasser? Gör detta isåfall och förklara vilka och varför.
+- Ta reda på vad Factory-mönstret innebär och förklara på redovisningen.
+
+BONUS-uppgift e)
+- Ordna en dialogruta som startar i början av programmet som frågar efter vilka av de 3 bilarna ni vill inkludera i simulationen.
+Fråga även användaren om simulations hatighet:
+Snabb (20 ms delay), Normal (50 ms), Långsam (100 ms).
+- Skriv ut "<Bil>: <Hastighet>" i något lämpligt hörn av panelen eller kanske på en helt ny JLabel ni kan lägga under alla knappar.
+- Kan du få piltangenterna på tangentbordet att ändra bilarnas riktning, samt att de inte krockar med varandra utan studsar ifrån varann? (Very Hard mode)
+
+--------------------------------------------------------------------------------
+Inlämning (filer):
+Scania.java
+CarController.java
+CarView.java
+DrawPanel.java
+
+Krav för godkänt på inlämning:
+Inga rader med fler än 80 tecken.
+Eran lösning ska endast innehålla ovannämnda filer i sektionen "Inlämning".
+Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
+Alla uppgifter ska vara lösta vid redovisningen.
+Lösning skall gå att kompilera!
+
+
+Labbkriterier:
+Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på något sätt. 
+Att diskutera lösningar är inte heller tillåtet, prata med labbhandledarna eller kursansvarig ifall ni behöver hjälp.
+För att få godkänt i labbarna gör ni muntliga redovisningar. Gruppen gör detta samtidigt men ni testas individuellt, dvs. båda (eller alla tre) i gruppen kommer ställas frågor var och en för sig. Detta för att undvika grupper där en medlem inte arbetar eller hamnar efter. Så se till att ni hänger med i laborationen, fråga om hjälp ifall ni fastnar.
