@@ -1,86 +1,96 @@
-Laboration 1 del 2.
+=== Laboration 1, del 2/2 ===
 
-Läs labbkriterierna längst ner på sidan först innan ni fortsätter!
+Läs labbkriterierna längst ner på sidan innan ni fortsätter!
 
-I denna laborationsuppgift är tanken att ni ska fortsätta på den lösning ni gjort i del 1. Vi ska fokusera oss på overloading, runtime typer och reflection.
+I denna laborationsuppgift är tanken att ni ska fortsätta på den lösning ni
+gjort i del 1. Vi ska fokusera oss på overloading, runtime-typer och reflection.
 
-Se till att noga läsa igenom instruktionerna och att ni följer de regler och krav som labbdokumentet föreskriver. Börja med att kolla igenom hela labbdokumentet och se vad som krävs för att få godkänt samt att ni laddar ner de filer som krävs.
+Se till att noga läsa igenom instruktionerna och att följa de regler och krav
+som labbdokumentet föreskriver. Börja med att kolla igenom hela labbdokumentet
+och se vad som krävs för att få godkänt, samt med att ladda ner de filer som
+behövs.
 
-Koden som skrivs och godkänns i denna labb kommer senare att användas i Laboration 2.
+Koden ni skriver i denna labb kommer senare att användas i Laboration 2.
 
-Börja med att klona repot https://github.com/niklasbroberg/DIT952-lab1 ifall ni inte redan gjort det i del 1. 
-Annars kan ni ta fram eran lösning för lab 1 del 1 och fortsätta därifrån. Notera att ifall ni inte är klara eller fått godkänt på lab 1 del 1 bör ni prioritera detta då denna del bygger på den förra.
+Börja med att klona repot https://github.com/niklasbroberg/DIT952-lab1, ifall ni
+inte redan gjort det i del 1. Annars kan ni ta fram er lösning från lab 1 del 1
+och fortsätta därifrån. Notera att om ni inte är klara eller fått godkänt på
+del 1 bör ni göra detta först.
 
-Uppgift 0)
-
-Använd git till denna del av labben, antingen via terminalen eller IntelliJ.
-Ni ska kunna uppvisa en commit-historik samt använda push och pull.
-
-Uppgift a)
+== Uppgift a) ==
 
 Börja med att skapa en ny bilklass Scania och lägg den i filen Scania.java i samma mapp.
 
 En Scania har följande konstruktorvärden:
-nrDoors = 2;
-color = Color.red;
-enginePower = 200;
-modelName = "Scania";
 
-Scania ska ärva från ACar och ha följande extra fält:
-private boolean bedIsDown;
-private	int bedDegree;
+  nrDoors = 2;
+  color = Color.red;
+  enginePower = 200;
+  modelName = "Scania";
+
+Scania ska ärva från Car och ha följande extra fält:
+
+  private boolean bedIsDown;
+  private int bedDegree;
 	
-Bed i fältnamnen motsvarar flaket på lastbilen som ni precis skapats. Följande förhållanden ska gälla och ni bör override:a lämpliga metoder för att se till att förhållandena stämmer:
-1. bedIsDown ska sättas till true om bedDegree är 0 och vara false annars.
-2. bedDegree kan inte vara lägre än 0 eller högre än 70.
-3. bedisDown kan endast vara false ifall currentSpeed är 0 (lastbilen står still)
+Bed i fältnamnen motsvarar flaket på lastbilen. Följande förhållanden ska gälla,
+och ni bör override:a lämpliga metoder för att se till att de alltid gäller:
 
-Lägg till följande metoder och implementera det namnet antyder på samt ovanstående förhållanden:
-public int getBedDegree();
-public bool bedIsDown();
-public void lowerBed(); // Sänker flaket 1 grad
-public void liftBed(); // Lyfter flaket 1 grad
-public void liftBed(int degrees); // Lyfter flaket degrees grader (positivt och negativt), en overload metod
-public void liftBed(boolean position); // max vinkel ifall true, helt nere ifall false, en overload metod
-public void honk(); // Skriver ut "HONK HONK!"
+- bedIsDown ska sättas till true om bedDegree är 0 och vara false annars.
+- bedDegree kan inte vara lägre än 0 eller högre än 70.
+- bedisDown kan endast vara false ifall currentSpeed är 0 (lastbilen står still)
 
-Lägg allt i Scania.java och skriv javadoc för klassen och fälten samt gör minst ett JUnit test i eran Testklass.
+Lägg till följande metoder och implementera det namnet antyder:
 
-Uppgift b)
+  public int getBedDegree();
+  public bool bedIsDown();
+  public void lowerBed(); // Sänker flaket 1 grad
+  public void liftBed(); // Lyfter flaket 1 grad
+  public void liftBed(int degrees); // Lyfter flaket degrees grader (positivt
+                                    // och negativt). En overload-metod
+  public void liftBed(boolean position); // maxvinkel ifall true, helt nere
+                                         // ifall false. En overload-metod
+  public void honk(); // Skriver ut "HONK HONK!"
+
+Lägg allt i Scania.java och skriv Javadoc för klassen och fälten. Gör minst ett
+JUnit-test i er Testklass.
+
+== Uppgift b) ==
 
 Denna uppgift kräver att ni bekantar er med reflection.
 
-Skapa en main metod i Main.java som skriver ut klassens namn, metoder och medlemsvariabler via reflektion för 3 skapade bilar (Volvo, Saab, Scania).
-Dvs. skapa ett nytt bilobjekt i main metoden och sedan anropa lämpliga metoder för att skriva ut klassens namn, metoder och variabler i runtime. Noga att ni använder reflection här.
+Skapa en main-metod som skriver ut klassens namn, metoder och medlemsvariabler
+via reflection för de bilklasser ni skapat (Saab, Volvo, Scania).
 
-Uppgift c)
+== Uppgift c) ==
 
-I main metoden i Main.java kan ni nu fortsätta skapa 2 bilar på följande vis:
+I main-metoden från föregående uppgift, skapa bilar på följande vis:
 
-ACar volvoA = new Volvo240();
-ACar saabA = new Saab95();
+  Foo volvo = new Volvo240();
+  Foo saab = new Saab95();
 
-Skapa en serie av statements där volvoA och volvo anropar samma metoder i exakt samma ordning men där deras variabler har olika värden.
+där Foo är namnet på någon lämplig superklass till båda bilarna.
+Notera att Foo ska vara lika i båda deklarationerna.
+
+Skapa en serie av statements där volvoA och saabA anropar samma metoder
+i exakt samma ordning, men där deras variabler får olika värden.
 Hur kan man åstadkomma detta och varför går det?
 
---------------------------------------------------------------------------------
-Inlämning (filer):
-Main.java
-Scania.java
-ACar.java
-Volvo240.java
-Saab95.java
-ICarMove.java
+T ex:
 
-Krav för godkänt på inlämning:
-Inga rader med fler än 80 tecken.
-Eran lösning ska endast innehålla ovannämnda filer i sektionen "Inlämning".
-Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
-Alla uppgifter ska vara lösta vid redovisningen.
-Lösning skall gå att kompilera!
+  volvo.metodA(arg1, ..., argn);
+  saab.metodA(arg1, ..., argn);
+  volvo.metodB(arg1, ..., argn);
+  saab.metodB(arg1, ..., argn);
+  ...
+  // skriv ut något fält som båda ärver, men som har olika värden.
 
+== Labbkriterier ==
+- Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på
+något sätt.
 
-Labbkriterier:
-Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på något sätt. 
-Att diskutera lösningar är inte heller tillåtet, prata med labbhandledarna eller kursansvarig ifall ni behöver hjälp.
-För att få godkänt i labbarna gör ni muntliga redovisningar. Gruppen gör detta samtidigt men ni testas individuellt, dvs. båda (eller alla tre) i gruppen kommer ställas frågor var och en för sig. Detta för att undvika grupper där en medlem inte arbetar eller hamnar efter. Så se till att ni hänger med i laborationen, fråga om hjälp ifall ni fastnar.
+- För att få godkänt på labben gör ni muntliga redovisningar. Gruppen gör detta
+samtidigt, men ni testas individuellt: alla gruppmedlemmar kommer ställas frågor
+var och en för sig. Detta för att undvika grupper där en medlem inte arbetar
+eller hamnar efter. Så se till att ni hänger med i laborationen; fråga om hjälp
+ifall ni fastnar.
