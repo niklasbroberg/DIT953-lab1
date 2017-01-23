@@ -3,8 +3,8 @@
 Läs labbkriterierna längst ner på sidan innan ni fortsätter!
 
 I denna laborationsuppgift är tanken att ni ska lära er att använda koncept som
-arv, gränssnitt, metod-overloading och metod-overriding (skuggning) tillsammans
-med Java.
+arv, gränssnitt, metod-overloading (överlagring) och metod-overriding (skuggning)
+tillsammans med Java.
 
 Se till att noga läsa igenom instruktionerna och att följa de regler och krav
 som labbdokumentet föreskriver. Börja med att kolla igenom hela labbdokumentet
@@ -86,20 +86,24 @@ farten kan öka eller sänkas. Skriv om metoder (och dokumentation) så att:
 
 - Anrop till break() inte kan resultera i att farten höjs.
 
+
+== Extra uppgifter för mer utmaning ==
+
+- Lägg till ytterligare bilar till er arvs-hierarki.
+- Lägg till en enkel command line controller genom vilken ni kan skapa bilar;
+  gasa och bromsa bilar; avgöra var bilarna befinner sig; etc.
+
 == Krav för godkänt på inlämning ==
-Inga rader med fler än 80 tecken.
-Eran lösning ska endast innehålla ovannämnda filer i sektionen "Inlämning".
 Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
 Alla uppgifter ska vara lösta vid redovisningen.
-Lösning skall gå att kompilera!
+Lösningen skall gå att kompilera och köra!
 
 
 == Labbkriterier ==
 - Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på
-något sätt.
+något sätt. Det är däremot accepterat att diskutera uppgifter och lösningar sinsemellan.
 
 - För att få godkänt på labben gör ni muntliga redovisningar. Gruppen gör detta
-samtidigt, men ni testas individuellt: alla gruppmedlemmar kommer ställas frågor
-var och en för sig. Detta för att undvika grupper där en medlem inte arbetar
-eller hamnar efter. Så se till att ni hänger med i laborationen; fråga om hjälp
-ifall ni fastnar.
+samtidigt: alla gruppmedlemmar kommer ställas frågor var och en för sig. För att
+gruppen ska bli godkänd ska alla gruppmedlemmar kunna svara på frågor.
+Så se till att ni hänger med i laborationen; fråga om hjälp ifall ni fastnar.
