@@ -1,5 +1,7 @@
 === Laboration 1, del 2/2 ===
 
+OBS! Denna instruktion är preliminär och kan komma att uppdateras inför vecka 2!
+
 Läs labbkriterierna längst ner på sidan innan ni fortsätter!
 
 I denna laborationsuppgift är tanken att ni ska fortsätta på den lösning ni
@@ -28,7 +30,7 @@ En Scania har följande konstruktorvärden:
   enginePower = 200;
   modelName = "Scania";
 
-Scania ska ärva från Car och ha följande extra fält:
+Scania ska införlivas i er arvs-hierarki från tidigare och ha följande extra fält:
 
   private boolean bedIsDown;
   private int bedDegree;
@@ -69,7 +71,7 @@ I main-metoden från föregående uppgift, skapa bilar på följande vis:
   Foo volvo = new Volvo240();
   Foo saab = new Saab95();
 
-där Foo är namnet på någon lämplig superklass till båda bilarna.
+där Foo är namnet på någon lämplig supertyp till båda bilarna från er tidigare kod.
 Notera att Foo ska vara lika i båda deklarationerna.
 
 Skapa en serie av statements där volvoA och saabA anropar samma metoder
@@ -90,7 +92,6 @@ T ex:
 något sätt.
 
 - För att få godkänt på labben gör ni muntliga redovisningar. Gruppen gör detta
-samtidigt, men ni testas individuellt: alla gruppmedlemmar kommer ställas frågor
-var och en för sig. Detta för att undvika grupper där en medlem inte arbetar
-eller hamnar efter. Så se till att ni hänger med i laborationen; fråga om hjälp
+samtidigt, men alla gruppmedlemmar kommer ställas frågor
+var och en för sig. Så se till att ni hänger med i laborationen; fråga om hjälp
 ifall ni fastnar.
