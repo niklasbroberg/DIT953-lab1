@@ -97,6 +97,8 @@ Viktiga saker att ha i åtanke under den här uppgiften:
   ordning som de lastades på (first-in-first-out), men bilar från olika filer
   kan lastas av i olika ordning (även omväxlande mellan filerna).
 - Utöka er command line controller till att hantera alla nya element.
+- Använd Javas Reflection API för att skriva ut klassnamn, metodnamn och
+  namn på fält för objekten i er modell.
 
 
 == Labbkriterier ==
