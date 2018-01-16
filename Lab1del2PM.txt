@@ -73,7 +73,11 @@ Kom ihåg att skriva Javadoc-dokumentation, och JUnit-tester för relevanta
 aspekter av er kod.
 
 
-== Uppgift c) ==
+== VG-uppgift ==
+
+Den här uppgiften behöver endast göras av dem satsar på VG på labb-delen.
+
+(1)
 
 Skapa en representation av en bilfärja - dvs en färja på vilken det går
 att lasta bilar. Notera att bilfärjan inte är en bil (doh), men att många
@@ -89,6 +93,23 @@ Viktiga saker att ha i åtanke under den här uppgiften:
   och biltransporten.
 - Fundera över behovet av polymorfism
 
+(2)
+
+Använd generiska typer för att skapa en lösning som generaliserar bilar
+och bilfärjor men abstraherar bort från domänen fordon. Dvs, designa och
+implementera lämpliga abstraktioner för saker som är "transportörer" och
+"transporterbara" i allmänhet. Meningen är att dessa ska vara lika
+tillämpliga på bilar och bilfärjor som på t ex känguruungar och
+kängurumammor. Refaktorisera er bil- och bilfärjekod så att
+de blir specifika instanser av koden från förra uppgiften.
+
+Viktigt att tänka på:
+- En kängurumamma ska inte kunna lasta på en bil i pungen. Samtidigt vill vi
+  inte låsa oss i förväg till att hon bara kan bära just känguruungar.
+  Designa så att om vi i framtiden implementerar t ex wallabyungar,
+  kan dessa lastas i en kängurumamma utan att vi behöver ändra kängurumammans
+  implementation (OCP).
+- Ni behöver inte implementera kängurus, det var bara ett exempel.
 
 == Extra uppgifter för mer utmaning ==
 

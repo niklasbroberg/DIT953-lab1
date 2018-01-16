@@ -93,7 +93,7 @@ farten kan öka eller sänkas. Skriv om metoder (och dokumentation) så att:
 - Lägg till en enkel command line controller genom vilken ni kan skapa bilar;
   gasa och bromsa bilar; avgöra var bilarna befinner sig; etc.
 
-== Krav för godkänt på inlämning ==
+== Krav för godkänt på redovisning ==
 Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet individuellt
 Alla uppgifter ska vara lösta vid redovisningen.
 Lösningen skall gå att kompilera och köra!
