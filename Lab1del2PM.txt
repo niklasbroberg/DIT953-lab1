@@ -101,7 +101,7 @@ implementera lämpliga abstraktioner för saker som är "transportörer" och
 "transporterbara" i allmänhet. Meningen är att dessa ska vara lika
 tillämpliga på bilar och bilfärjor som på t ex känguruungar och
 kängurumammor. Refaktorisera er bil- och bilfärjekod så att
-de blir specifika instanser av koden från förra uppgiften.
+de blir specifika instanser av koden från denna uppgift.
 
 Viktigt att tänka på:
 - En kängurumamma ska inte kunna lasta på en bil i pungen. Samtidigt vill vi
