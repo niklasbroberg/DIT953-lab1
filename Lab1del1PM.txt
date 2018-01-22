@@ -17,7 +17,7 @@ godkänns i denna labb kommer senare att användas i Laboration 2.
 
 == Uppgift a) - Arv och gränssnitt ==
 
-Börja med att klona repot https://github.com/niklasbroberg/DIT952-lab1 och kika
+Börja med att klona repot https://github.com/niklasbroberg/DIT953-lab1 och kika
 lite i det. För närvarande finns det två Java-filer, Volvo240.java och Saab95.java.
 Just nu verkar klasserna ha ganska mycket gemensamt, eftersom båda representerar
 bilar.
